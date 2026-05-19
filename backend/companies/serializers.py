@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Company
+from .models import Companies
 
 class Companyserializers(serializers.ModelSerializer):
     class Meta:
-        models = Company
+        models = Companies
         fields = "__all__"

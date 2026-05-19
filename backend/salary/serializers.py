@@ -1,9 +1,8 @@
 from rest_framework import serializers
-from .models import SalaryIncrement
-
+from .models import Salary
 
 class SalaryIncrementSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = SalaryIncrement
+        model = Salary
         fields = "__all__"

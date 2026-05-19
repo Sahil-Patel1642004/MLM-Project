@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Salary(models.Model):
+class ySalar(models.Model):
 
     INCREMENT_TYPE = (
         ('monthly', 'Monthly'),
