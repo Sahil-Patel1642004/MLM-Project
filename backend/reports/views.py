@@ -1,8 +1,8 @@
-from django.shortcuts import render
-from .models import Reports
-from .serializers import ReportsSerializer
-# Create your views here.
+from rest_framework.viewsets import ModelViewSet
+from backend.reports.models import Report
+from backend.reports.serializers import ReportsSerializer
 
-class ReportsViewSet():
-    qeryset = Reports.objects.all()
+
+class ReportsViewSet(ModelViewSet):
+    queryset = Report.objects.all()
     serializer_class = ReportsSerializer

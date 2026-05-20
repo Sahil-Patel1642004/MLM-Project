@@ -1,4 +1,6 @@
 from django.db import models
+from backend.employees.models import Employees
+from backend.accounts.models import Accounts
 
 # Create your models here.
 class Commissions(models.Model):
@@ -9,13 +11,13 @@ class Commissions(models.Model):
     )
 
     from_employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE,
         related_name='commission_from'
     )
 
     to_employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE,
         related_name='commission_to'
     )
@@ -23,7 +25,7 @@ class Commissions(models.Model):
     level_no = models.IntegerField()
 
     role = models.ForeignKey(
-        Role,
+        Accounts,
         on_delete=models.SET_NULL,
         null=True
     )

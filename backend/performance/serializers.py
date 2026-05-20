@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Performance
+from backend.performance.models import Performance
 
 
 class PerformanceSerializer(serializers.ModelSerializer):

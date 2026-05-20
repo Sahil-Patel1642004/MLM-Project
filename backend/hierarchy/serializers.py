@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Employehierachy
+from backend.hierarchy.models import Hierarchy
 
 
 class Employehierachyserializers(serializers.ModelSerializer):
     class Meta:
-        models = Employehierachy
+        models = Hierarchy
         fields = "__all__"

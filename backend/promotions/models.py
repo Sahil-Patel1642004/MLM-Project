@@ -1,10 +1,14 @@
 from django.db import models
 
+from backend.employees.models import Employees
+from backend.hierarchy.models import Role
+
 # Create your models here.
 class Promotion(models.Model):
 
     employee = models.ForeignKey(
-        Employee,
+        Employees,
+
         on_delete=models.CASCADE
     )
 
@@ -35,7 +39,7 @@ class Promotion(models.Model):
     promotion_reason = models.TextField()
 
     promoted_by = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.SET_NULL,
         null=True,
         related_name='promoted_by_employee'

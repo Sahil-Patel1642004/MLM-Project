@@ -1,10 +1,9 @@
-from django.shortcuts import render
-from .models import commissions
-from .serializers import commissionsSerializer
-# Create your views here.
+from rest_framework.viewsets import ModelViewSet
+
+from backend.commissions.models import Commissions
+from backend.commissions.serializers import CommissionsSerializer
 
 
-class CommissionsViewSet():
-    
-    queryset = commissions.objects.all()
+class CommissionsViewSet(ModelViewSet):
+    queryset = Commissions.objects.all()
     serializer_class = CommissionsSerializer

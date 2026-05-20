@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Accounts
+from backend.accounts.models import Accounts
 
 class Registerserializers(serializers.ModelSerializer):
     class Meta:

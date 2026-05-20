@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hierarchy</title>
+  <link rel="stylesheet" href="../assets/css/stylesheet.css" />
+  <script defer src="../assets/js/app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Sidebar navigation">
+      <div class="brand">
+        <div class="brand__title">MLM</div>
+        <div class="brand__subtitle">Employee Portal</div>
+      </div>
+      <nav class="nav">
+        <a class="nav__link" href="dashboard.html" data-nav="dashboard">Dashboard</a>
+        <a class="nav__link" href="accounts.html" data-nav="accounts">Accounts</a>
+        <a class="nav__link" href="companies.html" data-nav="companies">Companies</a>
+        <a class="nav__link" href="employees.html" data-nav="employees">Employees</a>
+        <a class="nav__link" href="hierarchy.html" data-nav="hierarchy">Hierarchy</a>
+        <a class="nav__link" href="attendance.html" data-nav="attendance">Attendance</a>
+        <a class="nav__link" href="wallet.html" data-nav="wallet">Wallet</a>
+        <a class="nav__link" href="salary.html" data-nav="salary">Salary</a>
+        <a class="nav__link" href="commissions.html" data-nav="commissions">Commissions</a>
+        <a class="nav__link" href="promotions.html" data-nav="promotions">Promotions</a>
+        <a class="nav__link" href="performance.html" data-nav="performance">Performance</a>
+        <a class="nav__link" href="reports.html" data-nav="reports">Reports</a>
+        <a class="nav__link" href="notifications.html" data-nav="notifications">Notifications</a>
+      </nav>
+      <div class="sidebar__footer">
+        <button class="btn btn--ghost" type="button" onclick="window.location.href='../login.html'">Logout</button>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <div class="topbar__left">
+          <div class="page-breadcrumb" id="pageBreadcrumb">Hierarchy</div>
+        </div>
+        <div class="topbar__right">
+          <div class="user-chip">
+            <span class="user-chip__avatar" aria-hidden="true">U</span>
+            <span class="user-chip__name">User</span>
+          </div>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero">
+          <h1 class="hero__title">Hierarchy</h1>
+          <p class="hero__subtitle">View employee-role downline structure (UI placeholder).</p>
+        </section>
+
+        <section class="card card--table">
+          <div class="card__header">
+            <h2 class="card__title">Hierarchy Table</h2>
+          </div>
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Employee/Role</th>
+                  <th>Parent</th>
+                  <th>Level</th>
+                  <th>Downline Count</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
+

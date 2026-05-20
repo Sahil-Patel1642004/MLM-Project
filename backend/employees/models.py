@@ -1,7 +1,11 @@
 from django.db import models
 
+from backend.companies.models import Companies as Company
+
 # Create your models here.
-class Employee(models.Model):
+class Employees(models.Model):
+
+
 
     employee_id = models.CharField(
         max_length=50,
@@ -30,10 +34,11 @@ class Employee(models.Model):
     )
 
     role = models.ForeignKey(
-        Role,
+        'hierarchy.Role',
         on_delete=models.SET_NULL,
         null=True
     )
+
 
     manager = models.ForeignKey(
         'self',

@@ -2,4 +2,6 @@ from django.apps import AppConfig
 
 
 class HierarchyConfig(AppConfig):
-    name = 'hierarchy'
+    default_auto_field = 'django.db.models.BigAutoField'
+    name = 'backend.hierarchy'
+

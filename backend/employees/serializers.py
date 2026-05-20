@@ -1,13 +1,13 @@
 from rest_framework import serializers
-from .models import Employee
+from backend.employees.models import Employees
 
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
-        models = Employee
+        models = Employees
         fields = "__all__"
 class Createserializer(serializers.ModelSerializer):
     class Meta:
-        models = Employee
+        models = Employees
         fields = [
             "employee_id",
             "first_name",
@@ -23,7 +23,7 @@ class Createserializer(serializers.ModelSerializer):
         ]
 class Listserializers(serializers.ModelSerializer):
     class Meta:
-        model = Employee
+        model = Employees
         fields = [
             "employee_id",
             "first_name",

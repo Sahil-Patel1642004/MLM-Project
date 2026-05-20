@@ -38,7 +38,26 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
+    # Local apps
+    'backend.accounts.apps.AccountsConfig',
+
+    'backend.attendance.apps.AttendanceConfig',
+
+    'backend.commissions',
+    'backend.companies',
+    'backend.employees',
+    'backend.hierarchy',
+    'backend.notifications',
+    'backend.performance',
+    'backend.promotions',
+    'backend.reports',
+    'backend.salary',
+    'backend.wallet',
+
+
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

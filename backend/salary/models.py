@@ -1,7 +1,9 @@
 from django.db import models
 
+from backend.employees.models import Employees
+
 # Create your models here.
-class ySalar(models.Model):
+class Salary(models.Model):
 
     INCREMENT_TYPE = (
         ('monthly', 'Monthly'),
@@ -9,8 +11,9 @@ class ySalar(models.Model):
     )
 
     employee = models.ForeignKey(
-        Employee,
-        on_delete=models.CASCADE
+        Employees,
+        on_delete=models.CASCADE,
+        related_name='salary_records'
     )
 
     old_salary = models.DecimalField(
@@ -39,7 +42,7 @@ class ySalar(models.Model):
     )
 
     approved_by = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.SET_NULL,
         null=True,
         related_name='salary_approved_by'
@@ -51,3 +54,4 @@ class ySalar(models.Model):
 
     def __str__(self):
         return self.employee.employee_id
+

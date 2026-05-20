@@ -1,12 +1,15 @@
 from django.db import models
 
+from backend.employees.models import Employees
+
 # Create your models here.
 class Performance(models.Model):
 
     employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE
     )
+
 
     month = models.CharField(max_length=20)
 

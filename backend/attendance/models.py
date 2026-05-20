@@ -1,7 +1,10 @@
 from django.db import models
 
+from backend.employees.models import Employees
+
 # Create your models here.
 class Attendance(models.Model):
+
 
     STATUS_CHOICES = (
         ('present', 'Present'),
@@ -9,9 +12,11 @@ class Attendance(models.Model):
     )
 
     employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE
     )
+
+
 
     check_in = models.DateTimeField()
 

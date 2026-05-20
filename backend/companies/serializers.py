@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Companies
+from backend.companies.models import Companies
 
 class Companyserializers(serializers.ModelSerializer):
     class Meta:

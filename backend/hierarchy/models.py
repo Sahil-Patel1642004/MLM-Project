@@ -1,7 +1,18 @@
 from django.db import models
 
+from backend.employees.models import Employees
+
 # Create your models here.
+class Role(models.Model):
+    role_name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.role_name
+
+
 class Hierarchy(models.Model):
+
+
 
     POSITION_CHOICES = (
         ('left', 'Left'),
@@ -9,12 +20,12 @@ class Hierarchy(models.Model):
     )
 
     employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE
     )
 
     parent_employee = models.ForeignKey(
-        Employee,
+        Employees,
         on_delete=models.CASCADE,
         related_name='child_employees'
     )

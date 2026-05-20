@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Commissions
+from backend.commissions.models import Commissions
 
 
-class Employehierachyserializers(serializers.ModelSerializer):
+class CommissionsSerializer(serializers.ModelSerializer):
     class Meta:
         models = Commissions
         fields = "__all__"

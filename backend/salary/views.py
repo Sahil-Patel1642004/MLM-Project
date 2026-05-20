@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from .models import Salary
-from .serializers import SalarySerializer
+from backend.salary.models import Salary
+from backend.salary.serializers import SalarySerializer
+from rest_framework.viewsets import ModelViewSet
+
 # Create your views here.
 
-class ReportsViewSet():
+class SalaryReportsViewSet(ModelViewSet):
     qeryset = Salary.objects.all()
     serializer_class = SalarySerializer

@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Salary
+from backend.salary.models import Salary
 
-class SalaryIncrementSerializer(serializers.ModelSerializer):
+class SalarySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Salary

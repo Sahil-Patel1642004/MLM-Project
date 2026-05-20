@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Attendance
+from backend.attendance.models import Attendance
 
 
 class AttendanceSerializer(serializers.ModelSerializer):

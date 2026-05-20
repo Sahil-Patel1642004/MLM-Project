@@ -1,8 +1,10 @@
 from django.shortcuts import render
-from .models import Hierarchy
-from .serializers import HierarchySerializer
+from backend.hierarchy.models import Hierarchy
+from backend.hierarchy.serializers import Employehierachyserializers
+from rest_framework.viewsets import ModelViewSet
+
 # Create your views here.
 
-class EmployeeViewSet():
+class EmployehierachyViewSet(ModelViewSet):
     qeryset = Hierarchy.objects.all()
-    serializer_class = HierarchySerializer
+    serializer_class = Employehierachyserializers
